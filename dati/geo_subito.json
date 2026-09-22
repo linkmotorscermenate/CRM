@@ -1,0 +1,1347 @@
+{
+ "formato": 2,
+ "regioni": {
+  "abruzzo": "13",
+  "basilicata": "17",
+  "calabria": "18",
+  "campania": "15",
+  "emilia romagna": "8",
+  "friuli venezia giulia": "7",
+  "lazio": "11",
+  "liguria": "3",
+  "lombardia": "4",
+  "marche": "12",
+  "molise": "14",
+  "piemonte": "2",
+  "puglia": "16",
+  "sardegna": "19",
+  "sicilia": "20",
+  "toscana": "9",
+  "trentino alto adige": "5",
+  "umbria": "10",
+  "valle d aosta": "1",
+  "veneto": "6"
+ },
+ "province": {
+  "chieti": {
+   "id": "2",
+   "regione_id": "13",
+   "nome": "Chieti",
+   "sigla": "CH"
+  },
+  "ch": {
+   "id": "2",
+   "regione_id": "13",
+   "nome": "Chieti",
+   "sigla": "CH"
+  },
+  "l aquila": {
+   "id": "1",
+   "regione_id": "13",
+   "nome": "L'Aquila",
+   "sigla": "AQ"
+  },
+  "aq": {
+   "id": "1",
+   "regione_id": "13",
+   "nome": "L'Aquila",
+   "sigla": "AQ"
+  },
+  "pescara": {
+   "id": "3",
+   "regione_id": "13",
+   "nome": "Pescara",
+   "sigla": "PE"
+  },
+  "pe": {
+   "id": "3",
+   "regione_id": "13",
+   "nome": "Pescara",
+   "sigla": "PE"
+  },
+  "teramo": {
+   "id": "4",
+   "regione_id": "13",
+   "nome": "Teramo",
+   "sigla": "TE"
+  },
+  "te": {
+   "id": "4",
+   "regione_id": "13",
+   "nome": "Teramo",
+   "sigla": "TE"
+  },
+  "matera": {
+   "id": "1",
+   "regione_id": "17",
+   "nome": "Matera",
+   "sigla": "MT"
+  },
+  "mt": {
+   "id": "1",
+   "regione_id": "17",
+   "nome": "Matera",
+   "sigla": "MT"
+  },
+  "potenza": {
+   "id": "2",
+   "regione_id": "17",
+   "nome": "Potenza",
+   "sigla": "PZ"
+  },
+  "pz": {
+   "id": "2",
+   "regione_id": "17",
+   "nome": "Potenza",
+   "sigla": "PZ"
+  },
+  "catanzaro": {
+   "id": "1",
+   "regione_id": "18",
+   "nome": "Catanzaro",
+   "sigla": "CZ"
+  },
+  "cz": {
+   "id": "1",
+   "regione_id": "18",
+   "nome": "Catanzaro",
+   "sigla": "CZ"
+  },
+  "cosenza": {
+   "id": "2",
+   "regione_id": "18",
+   "nome": "Cosenza",
+   "sigla": "CS"
+  },
+  "cs": {
+   "id": "2",
+   "regione_id": "18",
+   "nome": "Cosenza",
+   "sigla": "CS"
+  },
+  "crotone": {
+   "id": "3",
+   "regione_id": "18",
+   "nome": "Crotone",
+   "sigla": "KR"
+  },
+  "kr": {
+   "id": "3",
+   "regione_id": "18",
+   "nome": "Crotone",
+   "sigla": "KR"
+  },
+  "reggio calabria": {
+   "id": "4",
+   "regione_id": "18",
+   "nome": "Reggio Calabria",
+   "sigla": "RC"
+  },
+  "rc": {
+   "id": "4",
+   "regione_id": "18",
+   "nome": "Reggio Calabria",
+   "sigla": "RC"
+  },
+  "vibo valentia": {
+   "id": "5",
+   "regione_id": "18",
+   "nome": "Vibo Valentia",
+   "sigla": "VV"
+  },
+  "vv": {
+   "id": "5",
+   "regione_id": "18",
+   "nome": "Vibo Valentia",
+   "sigla": "VV"
+  },
+  "avellino": {
+   "id": "1",
+   "regione_id": "15",
+   "nome": "Avellino",
+   "sigla": "AV"
+  },
+  "av": {
+   "id": "1",
+   "regione_id": "15",
+   "nome": "Avellino",
+   "sigla": "AV"
+  },
+  "benevento": {
+   "id": "2",
+   "regione_id": "15",
+   "nome": "Benevento",
+   "sigla": "BN"
+  },
+  "bn": {
+   "id": "2",
+   "regione_id": "15",
+   "nome": "Benevento",
+   "sigla": "BN"
+  },
+  "caserta": {
+   "id": "3",
+   "regione_id": "15",
+   "nome": "Caserta",
+   "sigla": "CE"
+  },
+  "ce": {
+   "id": "3",
+   "regione_id": "15",
+   "nome": "Caserta",
+   "sigla": "CE"
+  },
+  "napoli": {
+   "id": "4",
+   "regione_id": "15",
+   "nome": "Napoli",
+   "sigla": "NA"
+  },
+  "na": {
+   "id": "4",
+   "regione_id": "15",
+   "nome": "Napoli",
+   "sigla": "NA"
+  },
+  "salerno": {
+   "id": "5",
+   "regione_id": "15",
+   "nome": "Salerno",
+   "sigla": "SA"
+  },
+  "sa": {
+   "id": "5",
+   "regione_id": "15",
+   "nome": "Salerno",
+   "sigla": "SA"
+  },
+  "bologna": {
+   "id": "1",
+   "regione_id": "8",
+   "nome": "Bologna",
+   "sigla": "BO"
+  },
+  "bo": {
+   "id": "1",
+   "regione_id": "8",
+   "nome": "Bologna",
+   "sigla": "BO"
+  },
+  "ferrara": {
+   "id": "2",
+   "regione_id": "8",
+   "nome": "Ferrara",
+   "sigla": "FE"
+  },
+  "fe": {
+   "id": "2",
+   "regione_id": "8",
+   "nome": "Ferrara",
+   "sigla": "FE"
+  },
+  "forl cesena": {
+   "id": "3",
+   "regione_id": "8",
+   "nome": "Forlì-Cesena",
+   "sigla": "FC"
+  },
+  "fc": {
+   "id": "3",
+   "regione_id": "8",
+   "nome": "Forlì-Cesena",
+   "sigla": "FC"
+  },
+  "modena": {
+   "id": "4",
+   "regione_id": "8",
+   "nome": "Modena",
+   "sigla": "MO"
+  },
+  "mo": {
+   "id": "4",
+   "regione_id": "8",
+   "nome": "Modena",
+   "sigla": "MO"
+  },
+  "parma": {
+   "id": "5",
+   "regione_id": "8",
+   "nome": "Parma",
+   "sigla": "PR"
+  },
+  "pr": {
+   "id": "5",
+   "regione_id": "8",
+   "nome": "Parma",
+   "sigla": "PR"
+  },
+  "piacenza": {
+   "id": "6",
+   "regione_id": "8",
+   "nome": "Piacenza",
+   "sigla": "PC"
+  },
+  "pc": {
+   "id": "6",
+   "regione_id": "8",
+   "nome": "Piacenza",
+   "sigla": "PC"
+  },
+  "ravenna": {
+   "id": "7",
+   "regione_id": "8",
+   "nome": "Ravenna",
+   "sigla": "RA"
+  },
+  "ra": {
+   "id": "7",
+   "regione_id": "8",
+   "nome": "Ravenna",
+   "sigla": "RA"
+  },
+  "reggio emilia": {
+   "id": "8",
+   "regione_id": "8",
+   "nome": "Reggio Emilia",
+   "sigla": "RE"
+  },
+  "re": {
+   "id": "8",
+   "regione_id": "8",
+   "nome": "Reggio Emilia",
+   "sigla": "RE"
+  },
+  "rimini": {
+   "id": "9",
+   "regione_id": "8",
+   "nome": "Rimini",
+   "sigla": "RN"
+  },
+  "rn": {
+   "id": "9",
+   "regione_id": "8",
+   "nome": "Rimini",
+   "sigla": "RN"
+  },
+  "gorizia": {
+   "id": "1",
+   "regione_id": "7",
+   "nome": "Gorizia",
+   "sigla": "GO"
+  },
+  "go": {
+   "id": "1",
+   "regione_id": "7",
+   "nome": "Gorizia",
+   "sigla": "GO"
+  },
+  "pordenone": {
+   "id": "2",
+   "regione_id": "7",
+   "nome": "Pordenone",
+   "sigla": "PN"
+  },
+  "pn": {
+   "id": "2",
+   "regione_id": "7",
+   "nome": "Pordenone",
+   "sigla": "PN"
+  },
+  "trieste": {
+   "id": "3",
+   "regione_id": "7",
+   "nome": "Trieste",
+   "sigla": "TS"
+  },
+  "ts": {
+   "id": "3",
+   "regione_id": "7",
+   "nome": "Trieste",
+   "sigla": "TS"
+  },
+  "udine": {
+   "id": "4",
+   "regione_id": "7",
+   "nome": "Udine",
+   "sigla": "UD"
+  },
+  "ud": {
+   "id": "4",
+   "regione_id": "7",
+   "nome": "Udine",
+   "sigla": "UD"
+  },
+  "frosinone": {
+   "id": "1",
+   "regione_id": "11",
+   "nome": "Frosinone",
+   "sigla": "FR"
+  },
+  "fr": {
+   "id": "1",
+   "regione_id": "11",
+   "nome": "Frosinone",
+   "sigla": "FR"
+  },
+  "latina": {
+   "id": "2",
+   "regione_id": "11",
+   "nome": "Latina",
+   "sigla": "LT"
+  },
+  "lt": {
+   "id": "2",
+   "regione_id": "11",
+   "nome": "Latina",
+   "sigla": "LT"
+  },
+  "rieti": {
+   "id": "3",
+   "regione_id": "11",
+   "nome": "Rieti",
+   "sigla": "RI"
+  },
+  "ri": {
+   "id": "3",
+   "regione_id": "11",
+   "nome": "Rieti",
+   "sigla": "RI"
+  },
+  "roma": {
+   "id": "4",
+   "regione_id": "11",
+   "nome": "Roma",
+   "sigla": "RM"
+  },
+  "rm": {
+   "id": "4",
+   "regione_id": "11",
+   "nome": "Roma",
+   "sigla": "RM"
+  },
+  "viterbo": {
+   "id": "5",
+   "regione_id": "11",
+   "nome": "Viterbo",
+   "sigla": "VT"
+  },
+  "vt": {
+   "id": "5",
+   "regione_id": "11",
+   "nome": "Viterbo",
+   "sigla": "VT"
+  },
+  "genova": {
+   "id": "1",
+   "regione_id": "3",
+   "nome": "Genova",
+   "sigla": "GE"
+  },
+  "ge": {
+   "id": "1",
+   "regione_id": "3",
+   "nome": "Genova",
+   "sigla": "GE"
+  },
+  "imperia": {
+   "id": "2",
+   "regione_id": "3",
+   "nome": "Imperia",
+   "sigla": "IM"
+  },
+  "im": {
+   "id": "2",
+   "regione_id": "3",
+   "nome": "Imperia",
+   "sigla": "IM"
+  },
+  "la spezia": {
+   "id": "3",
+   "regione_id": "3",
+   "nome": "La Spezia",
+   "sigla": "SP"
+  },
+  "sp": {
+   "id": "3",
+   "regione_id": "3",
+   "nome": "La Spezia",
+   "sigla": "SP"
+  },
+  "savona": {
+   "id": "4",
+   "regione_id": "3",
+   "nome": "Savona",
+   "sigla": "SV"
+  },
+  "sv": {
+   "id": "4",
+   "regione_id": "3",
+   "nome": "Savona",
+   "sigla": "SV"
+  },
+  "bergamo": {
+   "id": "1",
+   "regione_id": "4",
+   "nome": "Bergamo",
+   "sigla": "BG"
+  },
+  "bg": {
+   "id": "1",
+   "regione_id": "4",
+   "nome": "Bergamo",
+   "sigla": "BG"
+  },
+  "brescia": {
+   "id": "2",
+   "regione_id": "4",
+   "nome": "Brescia",
+   "sigla": "BS"
+  },
+  "bs": {
+   "id": "2",
+   "regione_id": "4",
+   "nome": "Brescia",
+   "sigla": "BS"
+  },
+  "como": {
+   "id": "3",
+   "regione_id": "4",
+   "nome": "Como",
+   "sigla": "CO"
+  },
+  "co": {
+   "id": "3",
+   "regione_id": "4",
+   "nome": "Como",
+   "sigla": "CO"
+  },
+  "cremona": {
+   "id": "4",
+   "regione_id": "4",
+   "nome": "Cremona",
+   "sigla": "CR"
+  },
+  "cr": {
+   "id": "4",
+   "regione_id": "4",
+   "nome": "Cremona",
+   "sigla": "CR"
+  },
+  "lecco": {
+   "id": "5",
+   "regione_id": "4",
+   "nome": "Lecco",
+   "sigla": "LC"
+  },
+  "lc": {
+   "id": "5",
+   "regione_id": "4",
+   "nome": "Lecco",
+   "sigla": "LC"
+  },
+  "lodi": {
+   "id": "6",
+   "regione_id": "4",
+   "nome": "Lodi",
+   "sigla": "LO"
+  },
+  "lo": {
+   "id": "6",
+   "regione_id": "4",
+   "nome": "Lodi",
+   "sigla": "LO"
+  },
+  "mantova": {
+   "id": "7",
+   "regione_id": "4",
+   "nome": "Mantova",
+   "sigla": "MN"
+  },
+  "mn": {
+   "id": "7",
+   "regione_id": "4",
+   "nome": "Mantova",
+   "sigla": "MN"
+  },
+  "milano": {
+   "id": "8",
+   "regione_id": "4",
+   "nome": "Milano",
+   "sigla": "MI"
+  },
+  "mi": {
+   "id": "8",
+   "regione_id": "4",
+   "nome": "Milano",
+   "sigla": "MI"
+  },
+  "monza e della brianza": {
+   "id": "9",
+   "regione_id": "4",
+   "nome": "Monza e della Brianza",
+   "sigla": "MB"
+  },
+  "mb": {
+   "id": "9",
+   "regione_id": "4",
+   "nome": "Monza e della Brianza",
+   "sigla": "MB"
+  },
+  "pavia": {
+   "id": "10",
+   "regione_id": "4",
+   "nome": "Pavia",
+   "sigla": "PV"
+  },
+  "pv": {
+   "id": "10",
+   "regione_id": "4",
+   "nome": "Pavia",
+   "sigla": "PV"
+  },
+  "sondrio": {
+   "id": "11",
+   "regione_id": "4",
+   "nome": "Sondrio",
+   "sigla": "SO"
+  },
+  "so": {
+   "id": "11",
+   "regione_id": "4",
+   "nome": "Sondrio",
+   "sigla": "SO"
+  },
+  "varese": {
+   "id": "12",
+   "regione_id": "4",
+   "nome": "Varese",
+   "sigla": "VA"
+  },
+  "va": {
+   "id": "12",
+   "regione_id": "4",
+   "nome": "Varese",
+   "sigla": "VA"
+  },
+  "ancona": {
+   "id": "1",
+   "regione_id": "12",
+   "nome": "Ancona",
+   "sigla": "AN"
+  },
+  "an": {
+   "id": "1",
+   "regione_id": "12",
+   "nome": "Ancona",
+   "sigla": "AN"
+  },
+  "ascoli piceno": {
+   "id": "2",
+   "regione_id": "12",
+   "nome": "Ascoli Piceno",
+   "sigla": "AP"
+  },
+  "ap": {
+   "id": "2",
+   "regione_id": "12",
+   "nome": "Ascoli Piceno",
+   "sigla": "AP"
+  },
+  "fermo": {
+   "id": "3",
+   "regione_id": "12",
+   "nome": "Fermo",
+   "sigla": "FM"
+  },
+  "fm": {
+   "id": "3",
+   "regione_id": "12",
+   "nome": "Fermo",
+   "sigla": "FM"
+  },
+  "macerata": {
+   "id": "4",
+   "regione_id": "12",
+   "nome": "Macerata",
+   "sigla": "MC"
+  },
+  "mc": {
+   "id": "4",
+   "regione_id": "12",
+   "nome": "Macerata",
+   "sigla": "MC"
+  },
+  "pesaro e urbino": {
+   "id": "5",
+   "regione_id": "12",
+   "nome": "Pesaro e Urbino",
+   "sigla": "PU"
+  },
+  "pu": {
+   "id": "5",
+   "regione_id": "12",
+   "nome": "Pesaro e Urbino",
+   "sigla": "PU"
+  },
+  "campobasso": {
+   "id": "1",
+   "regione_id": "14",
+   "nome": "Campobasso",
+   "sigla": "CB"
+  },
+  "cb": {
+   "id": "1",
+   "regione_id": "14",
+   "nome": "Campobasso",
+   "sigla": "CB"
+  },
+  "isernia": {
+   "id": "2",
+   "regione_id": "14",
+   "nome": "Isernia",
+   "sigla": "IS"
+  },
+  "is": {
+   "id": "2",
+   "regione_id": "14",
+   "nome": "Isernia",
+   "sigla": "IS"
+  },
+  "alessandria": {
+   "id": "1",
+   "regione_id": "2",
+   "nome": "Alessandria",
+   "sigla": "AL"
+  },
+  "al": {
+   "id": "1",
+   "regione_id": "2",
+   "nome": "Alessandria",
+   "sigla": "AL"
+  },
+  "asti": {
+   "id": "2",
+   "regione_id": "2",
+   "nome": "Asti",
+   "sigla": "AT"
+  },
+  "at": {
+   "id": "2",
+   "regione_id": "2",
+   "nome": "Asti",
+   "sigla": "AT"
+  },
+  "biella": {
+   "id": "3",
+   "regione_id": "2",
+   "nome": "Biella",
+   "sigla": "BI"
+  },
+  "bi": {
+   "id": "3",
+   "regione_id": "2",
+   "nome": "Biella",
+   "sigla": "BI"
+  },
+  "cuneo": {
+   "id": "4",
+   "regione_id": "2",
+   "nome": "Cuneo",
+   "sigla": "CN"
+  },
+  "cn": {
+   "id": "4",
+   "regione_id": "2",
+   "nome": "Cuneo",
+   "sigla": "CN"
+  },
+  "novara": {
+   "id": "5",
+   "regione_id": "2",
+   "nome": "Novara",
+   "sigla": "NO"
+  },
+  "no": {
+   "id": "5",
+   "regione_id": "2",
+   "nome": "Novara",
+   "sigla": "NO"
+  },
+  "torino": {
+   "id": "6",
+   "regione_id": "2",
+   "nome": "Torino",
+   "sigla": "TO"
+  },
+  "to": {
+   "id": "6",
+   "regione_id": "2",
+   "nome": "Torino",
+   "sigla": "TO"
+  },
+  "verbano cusio ossola": {
+   "id": "7",
+   "regione_id": "2",
+   "nome": "Verbano-Cusio-Ossola",
+   "sigla": "VB"
+  },
+  "vb": {
+   "id": "7",
+   "regione_id": "2",
+   "nome": "Verbano-Cusio-Ossola",
+   "sigla": "VB"
+  },
+  "vercelli": {
+   "id": "8",
+   "regione_id": "2",
+   "nome": "Vercelli",
+   "sigla": "VC"
+  },
+  "vc": {
+   "id": "8",
+   "regione_id": "2",
+   "nome": "Vercelli",
+   "sigla": "VC"
+  },
+  "bari": {
+   "id": "1",
+   "regione_id": "16",
+   "nome": "Bari",
+   "sigla": "BA"
+  },
+  "ba": {
+   "id": "1",
+   "regione_id": "16",
+   "nome": "Bari",
+   "sigla": "BA"
+  },
+  "barletta andria trani": {
+   "id": "6",
+   "regione_id": "16",
+   "nome": "Barletta-Andria-Trani",
+   "sigla": "BT"
+  },
+  "bt": {
+   "id": "6",
+   "regione_id": "16",
+   "nome": "Barletta-Andria-Trani",
+   "sigla": "BT"
+  },
+  "brindisi": {
+   "id": "2",
+   "regione_id": "16",
+   "nome": "Brindisi",
+   "sigla": "BR"
+  },
+  "br": {
+   "id": "2",
+   "regione_id": "16",
+   "nome": "Brindisi",
+   "sigla": "BR"
+  },
+  "foggia": {
+   "id": "3",
+   "regione_id": "16",
+   "nome": "Foggia",
+   "sigla": "FG"
+  },
+  "fg": {
+   "id": "3",
+   "regione_id": "16",
+   "nome": "Foggia",
+   "sigla": "FG"
+  },
+  "lecce": {
+   "id": "4",
+   "regione_id": "16",
+   "nome": "Lecce",
+   "sigla": "LE"
+  },
+  "le": {
+   "id": "4",
+   "regione_id": "16",
+   "nome": "Lecce",
+   "sigla": "LE"
+  },
+  "taranto": {
+   "id": "5",
+   "regione_id": "16",
+   "nome": "Taranto",
+   "sigla": "TA"
+  },
+  "ta": {
+   "id": "5",
+   "regione_id": "16",
+   "nome": "Taranto",
+   "sigla": "TA"
+  },
+  "cagliari": {
+   "id": "1",
+   "regione_id": "19",
+   "nome": "Cagliari",
+   "sigla": "CA"
+  },
+  "ca": {
+   "id": "1",
+   "regione_id": "19",
+   "nome": "Cagliari",
+   "sigla": "CA"
+  },
+  "gallura": {
+   "id": "3",
+   "regione_id": "19",
+   "nome": "Gallura",
+   "sigla": "OT"
+  },
+  "ot": {
+   "id": "3",
+   "regione_id": "19",
+   "nome": "Gallura",
+   "sigla": "OT"
+  },
+  "medio campidano": {
+   "id": "2",
+   "regione_id": "19",
+   "nome": "Medio Campidano",
+   "sigla": "VS"
+  },
+  "vs": {
+   "id": "2",
+   "regione_id": "19",
+   "nome": "Medio Campidano",
+   "sigla": "VS"
+  },
+  "nuoro": {
+   "id": "4",
+   "regione_id": "19",
+   "nome": "Nuoro",
+   "sigla": "NU"
+  },
+  "nu": {
+   "id": "4",
+   "regione_id": "19",
+   "nome": "Nuoro",
+   "sigla": "NU"
+  },
+  "ogliastra": {
+   "id": "5",
+   "regione_id": "19",
+   "nome": "Ogliastra",
+   "sigla": "OG"
+  },
+  "og": {
+   "id": "5",
+   "regione_id": "19",
+   "nome": "Ogliastra",
+   "sigla": "OG"
+  },
+  "oristano": {
+   "id": "7",
+   "regione_id": "19",
+   "nome": "Oristano",
+   "sigla": "OR"
+  },
+  "or": {
+   "id": "7",
+   "regione_id": "19",
+   "nome": "Oristano",
+   "sigla": "OR"
+  },
+  "sassari": {
+   "id": "8",
+   "regione_id": "19",
+   "nome": "Sassari",
+   "sigla": "SS"
+  },
+  "ss": {
+   "id": "8",
+   "regione_id": "19",
+   "nome": "Sassari",
+   "sigla": "SS"
+  },
+  "sulcis iglesiente": {
+   "id": "6",
+   "regione_id": "19",
+   "nome": "Sulcis Iglesiente",
+   "sigla": "SU"
+  },
+  "su": {
+   "id": "6",
+   "regione_id": "19",
+   "nome": "Sulcis Iglesiente",
+   "sigla": "SU"
+  },
+  "agrigento": {
+   "id": "1",
+   "regione_id": "20",
+   "nome": "Agrigento",
+   "sigla": "AG"
+  },
+  "ag": {
+   "id": "1",
+   "regione_id": "20",
+   "nome": "Agrigento",
+   "sigla": "AG"
+  },
+  "caltanissetta": {
+   "id": "2",
+   "regione_id": "20",
+   "nome": "Caltanissetta",
+   "sigla": "CL"
+  },
+  "cl": {
+   "id": "2",
+   "regione_id": "20",
+   "nome": "Caltanissetta",
+   "sigla": "CL"
+  },
+  "catania": {
+   "id": "3",
+   "regione_id": "20",
+   "nome": "Catania",
+   "sigla": "CT"
+  },
+  "ct": {
+   "id": "3",
+   "regione_id": "20",
+   "nome": "Catania",
+   "sigla": "CT"
+  },
+  "enna": {
+   "id": "4",
+   "regione_id": "20",
+   "nome": "Enna",
+   "sigla": "EN"
+  },
+  "en": {
+   "id": "4",
+   "regione_id": "20",
+   "nome": "Enna",
+   "sigla": "EN"
+  },
+  "messina": {
+   "id": "5",
+   "regione_id": "20",
+   "nome": "Messina",
+   "sigla": "ME"
+  },
+  "me": {
+   "id": "5",
+   "regione_id": "20",
+   "nome": "Messina",
+   "sigla": "ME"
+  },
+  "palermo": {
+   "id": "6",
+   "regione_id": "20",
+   "nome": "Palermo",
+   "sigla": "PA"
+  },
+  "pa": {
+   "id": "6",
+   "regione_id": "20",
+   "nome": "Palermo",
+   "sigla": "PA"
+  },
+  "ragusa": {
+   "id": "7",
+   "regione_id": "20",
+   "nome": "Ragusa",
+   "sigla": "RG"
+  },
+  "rg": {
+   "id": "7",
+   "regione_id": "20",
+   "nome": "Ragusa",
+   "sigla": "RG"
+  },
+  "siracusa": {
+   "id": "8",
+   "regione_id": "20",
+   "nome": "Siracusa",
+   "sigla": "SR"
+  },
+  "sr": {
+   "id": "8",
+   "regione_id": "20",
+   "nome": "Siracusa",
+   "sigla": "SR"
+  },
+  "trapani": {
+   "id": "9",
+   "regione_id": "20",
+   "nome": "Trapani",
+   "sigla": "TP"
+  },
+  "tp": {
+   "id": "9",
+   "regione_id": "20",
+   "nome": "Trapani",
+   "sigla": "TP"
+  },
+  "arezzo": {
+   "id": "1",
+   "regione_id": "9",
+   "nome": "Arezzo",
+   "sigla": "AR"
+  },
+  "ar": {
+   "id": "1",
+   "regione_id": "9",
+   "nome": "Arezzo",
+   "sigla": "AR"
+  },
+  "firenze": {
+   "id": "3",
+   "regione_id": "9",
+   "nome": "Firenze",
+   "sigla": "FI"
+  },
+  "fi": {
+   "id": "3",
+   "regione_id": "9",
+   "nome": "Firenze",
+   "sigla": "FI"
+  },
+  "grosseto": {
+   "id": "2",
+   "regione_id": "9",
+   "nome": "Grosseto",
+   "sigla": "GR"
+  },
+  "gr": {
+   "id": "2",
+   "regione_id": "9",
+   "nome": "Grosseto",
+   "sigla": "GR"
+  },
+  "livorno": {
+   "id": "4",
+   "regione_id": "9",
+   "nome": "Livorno",
+   "sigla": "LI"
+  },
+  "li": {
+   "id": "4",
+   "regione_id": "9",
+   "nome": "Livorno",
+   "sigla": "LI"
+  },
+  "lucca": {
+   "id": "5",
+   "regione_id": "9",
+   "nome": "Lucca",
+   "sigla": "LU"
+  },
+  "lu": {
+   "id": "5",
+   "regione_id": "9",
+   "nome": "Lucca",
+   "sigla": "LU"
+  },
+  "massa carrara": {
+   "id": "6",
+   "regione_id": "9",
+   "nome": "Massa-Carrara",
+   "sigla": "MS"
+  },
+  "ms": {
+   "id": "6",
+   "regione_id": "9",
+   "nome": "Massa-Carrara",
+   "sigla": "MS"
+  },
+  "pisa": {
+   "id": "7",
+   "regione_id": "9",
+   "nome": "Pisa",
+   "sigla": "PI"
+  },
+  "pi": {
+   "id": "7",
+   "regione_id": "9",
+   "nome": "Pisa",
+   "sigla": "PI"
+  },
+  "pistoia": {
+   "id": "8",
+   "regione_id": "9",
+   "nome": "Pistoia",
+   "sigla": "PT"
+  },
+  "pt": {
+   "id": "8",
+   "regione_id": "9",
+   "nome": "Pistoia",
+   "sigla": "PT"
+  },
+  "prato": {
+   "id": "9",
+   "regione_id": "9",
+   "nome": "Prato",
+   "sigla": "PO"
+  },
+  "po": {
+   "id": "9",
+   "regione_id": "9",
+   "nome": "Prato",
+   "sigla": "PO"
+  },
+  "siena": {
+   "id": "10",
+   "regione_id": "9",
+   "nome": "Siena",
+   "sigla": "SI"
+  },
+  "si": {
+   "id": "10",
+   "regione_id": "9",
+   "nome": "Siena",
+   "sigla": "SI"
+  },
+  "bolzano": {
+   "id": "1",
+   "regione_id": "5",
+   "nome": "Bolzano",
+   "sigla": "BZ"
+  },
+  "bz": {
+   "id": "1",
+   "regione_id": "5",
+   "nome": "Bolzano",
+   "sigla": "BZ"
+  },
+  "trento": {
+   "id": "2",
+   "regione_id": "5",
+   "nome": "Trento",
+   "sigla": "TN"
+  },
+  "tn": {
+   "id": "2",
+   "regione_id": "5",
+   "nome": "Trento",
+   "sigla": "TN"
+  },
+  "perugia": {
+   "id": "1",
+   "regione_id": "10",
+   "nome": "Perugia",
+   "sigla": "PG"
+  },
+  "pg": {
+   "id": "1",
+   "regione_id": "10",
+   "nome": "Perugia",
+   "sigla": "PG"
+  },
+  "terni": {
+   "id": "2",
+   "regione_id": "10",
+   "nome": "Terni",
+   "sigla": "TR"
+  },
+  "tr": {
+   "id": "2",
+   "regione_id": "10",
+   "nome": "Terni",
+   "sigla": "TR"
+  },
+  "aosta": {
+   "id": "1",
+   "regione_id": "1",
+   "nome": "Aosta",
+   "sigla": "AO"
+  },
+  "ao": {
+   "id": "1",
+   "regione_id": "1",
+   "nome": "Aosta",
+   "sigla": "AO"
+  },
+  "belluno": {
+   "id": "1",
+   "regione_id": "6",
+   "nome": "Belluno",
+   "sigla": "BL"
+  },
+  "bl": {
+   "id": "1",
+   "regione_id": "6",
+   "nome": "Belluno",
+   "sigla": "BL"
+  },
+  "padova": {
+   "id": "2",
+   "regione_id": "6",
+   "nome": "Padova",
+   "sigla": "PD"
+  },
+  "pd": {
+   "id": "2",
+   "regione_id": "6",
+   "nome": "Padova",
+   "sigla": "PD"
+  },
+  "rovigo": {
+   "id": "3",
+   "regione_id": "6",
+   "nome": "Rovigo",
+   "sigla": "RO"
+  },
+  "ro": {
+   "id": "3",
+   "regione_id": "6",
+   "nome": "Rovigo",
+   "sigla": "RO"
+  },
+  "treviso": {
+   "id": "4",
+   "regione_id": "6",
+   "nome": "Treviso",
+   "sigla": "TV"
+  },
+  "tv": {
+   "id": "4",
+   "regione_id": "6",
+   "nome": "Treviso",
+   "sigla": "TV"
+  },
+  "venezia": {
+   "id": "5",
+   "regione_id": "6",
+   "nome": "Venezia",
+   "sigla": "VE"
+  },
+  "ve": {
+   "id": "5",
+   "regione_id": "6",
+   "nome": "Venezia",
+   "sigla": "VE"
+  },
+  "verona": {
+   "id": "6",
+   "regione_id": "6",
+   "nome": "Verona",
+   "sigla": "VR"
+  },
+  "vr": {
+   "id": "6",
+   "regione_id": "6",
+   "nome": "Verona",
+   "sigla": "VR"
+  },
+  "vicenza": {
+   "id": "7",
+   "regione_id": "6",
+   "nome": "Vicenza",
+   "sigla": "VI"
+  },
+  "vi": {
+   "id": "7",
+   "regione_id": "6",
+   "nome": "Vicenza",
+   "sigla": "VI"
+  }
+ }
+}

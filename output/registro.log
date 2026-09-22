@@ -1,0 +1,207 @@
+
+===== 10/09/2026 11:01 =====
+Zona: Milano e hinterland
+Fasce: 6 · max 300 annunci per fascia e per fonte
+
+▸ fascia fino a 3.000 €
+  AutoScout24 (20121, 50 km): 54
+  Subito (Milano): 49
+  Subito (Monza e della Brianza): 23
+  Subito (Lodi): 7
+  Subito (Pavia): 10
+
+▸ fascia 3.000 - 6.000 €
+  AutoScout24 (20121, 50 km): 295
+  Subito (Milano): 220
+  Subito (Monza e della Brianza): 136
+  Subito (Lodi): 29
+  Subito (Pavia): 83
+
+▸ fascia 6.000 - 10.000 €
+  AutoScout24 (20121, 50 km): 287
+  Subito (Milano): 253
+  Subito (Monza e della Brianza): 257
+  Subito (Lodi): 63
+  Subito (Pavia): 171
+
+▸ fascia 10.000 - 15.000 €
+  AutoScout24 (20121, 50 km): 278
+  Subito (Milano): 255
+  Subito (Monza e della Brianza): 253
+  Subito (Lodi): 75
+  Subito (Pavia): 180
+
+▸ fascia 15.000 - 25.000 €
+  AutoScout24 (20121, 50 km): 292
+  Subito (Milano): 273
+  Subito (Monza e della Brianza): 271
+  Subito (Lodi): 74
+  Subito (Pavia): 216
+
+▸ fascia oltre 25.000 €
+  AutoScout24 (20121, 50 km): 285
+  Subito (Milano): 282
+  Subito (Monza e della Brianza): 197
+  Subito (Lodi): 43
+  Subito (Pavia): 105
+
+533 annunci scartati dai filtri
+
+4545 nuovi · 5016 annunci di privati · 195 presenti su entrambi i siti
+CSV    /Users/moneymaker/Desktop/Link Motors/output/auto_privati_2026-09-10_1101.csv
+Report /Users/moneymaker/Desktop/Link Motors/output/auto_privati_2026-09-10_1101.html
+ 
+===== 10/09/2026 12:34:16,76 ===== 
+PYTHON NON INSTALLATO. 
+Installarlo con: winget install -e --id Python.Python.3.13 
+Oppure da python.org, spuntando "Add python.exe to PATH". 
+Il finto python.exe del Microsoft Store non va bene: non esegue niente. 
+ 
+===== 10/09/2026 12:41:01,88 ===== 
+Python: C:\Users\infin\AppData\Local\Programs\Python\Python313\python.exe  
+Zona: Milano e hinterland
+Fasce: 6 · max 20 annunci per fascia e per fonte
+▸ fascia fino a 3.000 €
+  AutoScout24 (20121, 50 km): 20
+  Subito (Lodi): 7
+  Subito (Milano): 11
+  Subito (Monza e della Brianza): 6
+  Subito (Pavia): 3
+▸ fascia 3.000 - 6.000 €
+  AutoScout24 (20121, 50 km): 19
+  Subito (Lodi): 11
+  Subito (Milano): 16
+  Subito (Monza e della Brianza): 11
+  Subito (Pavia): 14
+▸ fascia 6.000 - 10.000 €
+  AutoScout24 (20121, 50 km): 20
+  Subito (Lodi): 14
+  Subito (Milano): 14
+  Subito (Monza e della Brianza): 15
+  Subito (Pavia): 15
+▸ fascia 10.000 - 15.000 €
+  AutoScout24 (20121, 50 km): 18
+  Subito (Lodi): 15
+  Subito (Milano): 19
+  Subito (Monza e della Brianza): 16
+  Subito (Pavia): 16
+▸ fascia 15.000 - 25.000 €
+  AutoScout24 (20121, 50 km): 20
+  Subito (Lodi): 17
+  Subito (Milano): 18
+  Subito (Monza e della Brianza): 18
+  Subito (Pavia): 19
+▸ fascia oltre 25.000 €
+  AutoScout24 (20121, 50 km): 19
+  Subito (Lodi): 18
+  Subito (Milano): 18
+  Subito (Monza e della Brianza): 20
+  Subito (Pavia): 20
+107 annunci scartati dai filtri
+
+23 nuovi · 467 annunci di privati · 7 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-10_1241.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-10_1241.html
+ 
+===== 10/09/2026 12:46:29,95 ===== 
+Python: py -3 
+Zona: Milano e hinterland
+Fasce: 6 · max 300 annunci per fascia e per fonte
+▸ fascia fino a 3.000 €
+  AutoScout24 (20121, 50 km): 54
+  Subito (Lodi): 7
+  Subito (Milano): 45
+  Subito (Monza e della Brianza): 20
+  Subito (Pavia): 8
+▸ fascia 3.000 - 6.000 €
+  AutoScout24 (20121, 50 km): 296
+  Subito (Lodi): 29
+  Subito (Milano): 220
+  Subito (Monza e della Brianza): 135
+  Subito (Pavia): 83
+▸ fascia 6.000 - 10.000 €
+  AutoScout24 (20121, 50 km): 287
+  Subito (Lodi): 63
+  Subito (Milano): 253
+  Subito (Monza e della Brianza): 257
+  Subito (Pavia): 171
+▸ fascia 10.000 - 15.000 €
+  AutoScout24 (20121, 50 km): 278
+  Subito (Lodi): 75
+  Subito (Milano): 255
+  Subito (Monza e della Brianza): 254
+  Subito (Pavia): 180
+▸ fascia 15.000 - 25.000 €
+  AutoScout24 (20121, 50 km): 292
+  Subito (Lodi): 74
+  Subito (Milano): 273
+  Subito (Monza e della Brianza): 271
+  Subito (Pavia): 216
+▸ fascia oltre 25.000 €
+  AutoScout24 (20121, 50 km): 285
+  Subito (Lodi): 43
+  Subito (Milano): 281
+  Subito (Monza e della Brianza): 196
+  Subito (Pavia): 104
+541 annunci scartati dai filtri
+
+10 nuovi · 5005 annunci di privati · 193 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-10_1246.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-10_1246.html
+ 
+===== 10/09/2026 13:56:35,71 ===== 
+Python: C:\Users\infin\AppData\Local\Programs\Python\Python313\python.exe  
+GIRO FALLITO (codice -1) 
+ 
+===== 11/09/2026  9:00:03,28 ===== 
+Python: py -3 
+Zona: Cermenate e dintorni
+Fasce: 1 · max 1000 annunci per fascia e per fonte
+▸ fascia fino a 5.000 €
+  AutoScout24 (21072, 20 km): 998
+  Subito (Como): 218
+350 annunci scartati dai filtri
+
+82 nuovi · 1216 annunci di privati · 4 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-11_0900.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-11_0900.html
+ 
+===== 17/09/2026  9:00:01,61 ===== 
+Python: py -3 
+Zona: Cermenate e dintorni
+Fasce: 1 · max 1000 annunci per fascia e per fonte
+▸ fascia oltre 25.000 €
+  AutoScout24 (22072, 50 km): 1000
+  Subito (Como): 117
+  Subito (Lecco): 46
+22 annunci scartati dai filtri
+
+69 nuovi · 1163 annunci di privati · 16 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-17_0900.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-17_0900.html
+ 
+===== 18/09/2026  9:00:01,58 ===== 
+Python: py -3 
+Zona: Cermenate e dintorni
+Fasce: 1 · max 1000 annunci per fascia e per fonte
+▸ fascia oltre 25.000 €
+  AutoScout24 (22072, 50 km): 1000
+  Subito (Como): ERRORE — https://hades.subito.it/v1/search/items?c=2&t=s&advt=0%2C2&sort=datedesc&lim=50&r=4&ci=3&ps=25000&ys=2021&me=100000&start=0 non raggiungibile: HTTP Error 403: Forbidden
+  Subito (Lecco): ERRORE — https://hades.subito.it/v1/search/items?c=2&t=s&advt=0%2C2&sort=datedesc&lim=50&r=4&ci=5&ps=25000&ys=2021&me=100000&start=0 non raggiungibile: HTTP Error 403: Forbidden
+
+27 nuovi · 1000 annunci di privati · 0 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-18_0900.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-18_0900.html
+ 
+===== 22/09/2026  9:00:02,06 ===== 
+Python: py -3 
+Zona: Cermenate e dintorni
+Fasce: 1 · max 1000 annunci per fascia e per fonte
+▸ fascia oltre 25.000 €
+  AutoScout24 (22072, 50 km): 1000
+  Subito (Como): ERRORE — https://hades.subito.it/v1/search/items?c=2&t=s&advt=0%2C2&sort=datedesc&lim=50&r=4&ci=3&ps=25000&ys=2021&me=100000&start=0 non raggiungibile: HTTP Error 403: Forbidden
+  Subito (Lecco): ERRORE — https://hades.subito.it/v1/search/items?c=2&t=s&advt=0%2C2&sort=datedesc&lim=50&r=4&ci=5&ps=25000&ys=2021&me=100000&start=0 non raggiungibile: HTTP Error 403: Forbidden
+
+99 nuovi · 1000 annunci di privati · 0 presenti su entrambi i siti
+CSV    C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-22_0900.csv
+Report C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\output\auto_privati_2026-09-22_0900.html

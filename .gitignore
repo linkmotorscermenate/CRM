@@ -1,0 +1,3 @@
+# Cache Python (rigenerata a ogni esecuzione)
+__pycache__/
+*.py[cod]

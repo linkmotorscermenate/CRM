@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricerca auto da privati</title>
+<link rel="stylesheet" href="/stile.css">
+</head>
+<body>
+
+<div class="testata">
+  <div class="dentro">
+    <div class="marchio">
+      Auto da privati
+      <small id="sottotitolo">caricamento…</small>
+    </div>
+    <div class="spinta"></div>
+    <button id="mostra-impostazioni">Impostazioni</button>
+    <a class="bottone" id="scarica-csv" href="#" hidden>Scarica CSV</a>
+    <button id="avvia" class="primario">Cerca ora</button>
+  </div>
+</div>
+
+<div class="foglio">
+
+  <!-- ---------------- impostazioni ---------------- -->
+  <section class="riquadro" id="impostazioni" hidden>
+    <h2>Dove cercare, e cosa tenere</h2>
+    <div class="colonne">
+
+      <div>
+        <h3>Zona</h3>
+        <div class="campo">
+          <label for="etichetta">Nome della zona</label>
+          <input id="etichetta" placeholder="Milano e hinterland">
+        </div>
+        <div class="riga-campi">
+          <div class="campo">
+            <label for="cap">CAP di partenza (AutoScout24)</label>
+            <input id="cap" inputmode="numeric" maxlength="5" placeholder="20121">
+          </div>
+          <div class="campo">
+            <label for="raggio">Raggio in km</label>
+            <input id="raggio" type="number" min="1" max="500" step="5">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="regione">Regione (Subito)</label>
+          <select id="regione"></select>
+        </div>
+        <div class="campo">
+          <label>Province da includere</label>
+          <div class="province" id="province"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Fasce di prezzo</h3>
+        <div id="fasce"></div>
+        <button id="aggiungi-fascia">+ aggiungi fascia</button>
+
+        <h3>Quanto a fondo</h3>
+        <div class="riga-campi">
+          <div class="campo">
+            <label for="massimo">Max annunci per fascia e fonte</label>
+            <input id="massimo" type="number" min="10" max="1000" step="10">
+          </div>
+          <div class="campo">
+            <label for="pausa">Pausa fra richieste (secondi)</label>
+            <input id="pausa" type="number" min="1" max="10" step="0.5">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Filtri</h3>
+        <div class="riga-campi">
+          <div class="campo">
+            <label for="anno-min">Immatricolata dal</label>
+            <input id="anno-min" type="number" min="1990" max="2030">
+          </div>
+          <div class="campo">
+            <label for="km-max">Km massimi</label>
+            <input id="km-max" type="number" min="0" step="10000">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="prezzo-min">Prezzo minimo credibile (€)</label>
+          <input id="prezzo-min" type="number" min="0" step="100">
+        </div>
+        <div class="interruttore">
+          <input type="checkbox" id="incongruenti">
+          <label for="incongruenti" style="margin:0">Scarta i prezzi incompatibili con anno e km</label>
+        </div>
+        <div class="campo">
+          <label for="parole">Parole da escludere (una per riga)</label>
+          <textarea id="parole" rows="6"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="azioni">
+      <button id="salva" class="primario">Salva</button>
+      <button id="salva-cerca">Salva e cerca</button>
+      <button id="prova">Giro di prova (veloce)</button>
+      <button id="chiudi-impostazioni" style="margin-left:auto">Chiudi</button>
+    </div>
+  </section>
+
+  <!-- ---------------- avanzamento ---------------- -->
+  <section class="riquadro" id="avanzamento" hidden>
+    <h2><span class="pulsante-carica"></span><span id="titolo-avanzamento">Ricerca in corso…</span></h2>
+    <div class="registro" id="registro"></div>
+  </section>
+
+  <!-- ---------------- risultati ---------------- -->
+  <div id="avvisi"></div>
+  <div class="numeri" id="numeri"></div>
+
+  <section class="riquadro" id="riquadro-grafico">
+    <h2>Quante auto per fascia di prezzo</h2>
+    <div id="grafico"></div>
+  </section>
+
+  <section class="riquadro">
+    <h2>Gli annunci</h2>
+    <div class="filtri">
+      <input class="cerca" id="testo" type="search" placeholder="Cerca marca, modello, comune…">
+      <select id="filtro-fascia"><option value="">Tutte le fasce</option></select>
+      <select id="filtro-fonte">
+        <option value="">Tutte e due le fonti</option>
+        <option value="AutoScout24">Solo AutoScout24</option>
+        <option value="Subito">Solo Subito</option>
+      </select>
+      <select id="filtro-nuovi">
+        <option value="">Tutti gli annunci</option>
+        <option value="nuovi">Solo i nuovi</option>
+      </select>
+      <select id="filtro-chi">
+        <option value="">Tutti gli agenti</option>
+        <option value="__contattati">Tutti i contattati</option>
+      </select>
+      <span class="vuota" id="quanti"></span>
+    </div>
+    <div class="scorri"><table id="tabella">
+      <thead><tr>
+        <th class="ordinabile" data-campo="nome">Auto</th>
+        <th class="ordinabile num" data-campo="anno">Anno</th>
+        <th class="ordinabile num" data-campo="km">Km</th>
+        <th class="ordinabile num" data-campo="prezzo">Prezzo</th>
+        <th>Zona</th>
+        <th>Telefono</th>
+        <th>Annuncio</th>
+        <th>Pubblicato</th>
+        <th>Contattato</th>
+        <th>Chi</th>
+        <th>Status affare</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <div class="altre"><button id="altre" hidden>Mostra altre 100</button></div>
+  </section>
+
+  <footer>
+    Gira sul tuo Mac: la ricerca interroga AutoScout24 e Subito una richiesta alla volta.<br>
+    I numeri raccolti sono di persone fisiche: prima di telefonare, verificare il
+    Registro Pubblico delle Opposizioni.
+  </footer>
+</div>
+
+<div id="suggerimento"></div>
+<script src="/app.js"></script>
+</body>
+</html>

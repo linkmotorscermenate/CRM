@@ -1,0 +1,38 @@
+{
+  "zona": {
+    "etichetta": "Cermenate e dintorni",
+    "autoscout": {
+      "cap": "22072",
+      "raggio_km": 50
+    },
+    "subito": {
+      "regione": "Lombardia",
+      "province": [
+        "Como",
+        "Lecco",
+        "Monza e della Brianza",
+        "Varese"
+      ]
+    }
+  },
+  "fasce_prezzo": [
+    [
+      12000,
+      null
+    ]
+  ],
+  "filtri": {
+    "anno_min": 2021,
+    "km_max": 100000,
+    "prezzo_min_credibile": null,
+    "scarta_incongruenti": false,
+    "escludi_parole": []
+  },
+  "limiti": {
+    "max_annunci_per_fascia": 1000,
+    "pausa_secondi": 1.5
+  },
+  "output": {
+    "cartella": "output"
+  }
+}

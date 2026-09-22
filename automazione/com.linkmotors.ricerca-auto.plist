@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.linkmotors.ricerca-auto</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/moneymaker/Desktop/Link Motors/giro-giornaliero.sh</string>
+  </array>
+
+  <!-- Ogni giorno alle 9:00. Se il Mac è spento o addormentato a quell'ora,
+       il giro parte appena si riaccende. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/moneymaker/Desktop/Link Motors</string>
+
+  <key>StandardOutPath</key>
+  <string>/Users/moneymaker/Desktop/Link Motors/output/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/moneymaker/Desktop/Link Motors/output/launchd.log</string>
+
+  <!-- Niente riavvii automatici: se fallisce, riprova domani. -->
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

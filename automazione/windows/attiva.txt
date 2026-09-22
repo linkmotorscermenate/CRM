@@ -1,0 +1,112 @@
+FAR PARTIRE LA RICERCA OGNI MATTINA ALLE 9:00 (Windows)
+=======================================================
+
+
+PRIMA DI TUTTO: INSTALLARE PYTHON
+---------------------------------
+
+Senza Python la ricerca non parte: è il programma che fa il giro.
+Windows ne ha uno finto preinstallato (python.exe dentro WindowsApps) che
+apre solo il Microsoft Store: quello non serve, e il .bat lo salta da solo.
+
+Aprire il Prompt dei comandi e incollare:
+
+    winget install -e --id Python.Python.3.13
+
+In alternativa, scaricarlo da python.org e durante l'installazione spuntare
+"Add python.exe to PATH".
+
+Per controllare che sia andata a buon fine, CHIUDERE e RIAPRIRE il Prompt
+dei comandi, poi:
+
+    py -3 -V
+
+Deve rispondere qualcosa tipo "Python 3.13.x". Se dice che il comando non
+esiste, l'installazione non è riuscita.
+
+Non serve installare altro: il programma usa solo quello che Python ha già
+dentro.
+
+
+PROVARE SUBITO, A MANO
+----------------------
+
+Doppio clic su giro-adesso.bat (in questa stessa cartella). Fa il giro,
+mostra come è andata e alla fine apre il report. Ci vogliono alcuni minuti.
+
+Se va a buon fine, si può passare all'automazione qui sotto.
+
+
+Per l'automazione ci sono due modi. Il primo è più veloce, il secondo a finestre.
+
+
+MODO 1 — un comando solo
+------------------------
+
+Aprire il Prompt dei comandi COME AMMINISTRATORE
+(tasto Windows, scrivere "cmd", tasto destro > Esegui come amministratore)
+e incollare questo, sistemando il percorso se la cartella è altrove:
+
+schtasks /create /tn "Ricerca auto Link Motors" /tr "\"C:\Users\infin\INFINITY CONTRACT SRL\Infinity Contract srl - Link Motors Venditori\auto-research-routine-main\auto-research-routine-main\Link Motors\automazione\windows\giro-giornaliero.bat\"" /sc daily /st 09:00 /f
+
+Le virgolette con la barra rovesciata servono: il percorso contiene spazi e
+senza quelle Windows lo taglia al primo spazio.
+
+Per controllare che sia stato creato:
+    schtasks /query /tn "Ricerca auto Link Motors"
+
+Per farlo partire subito, senza aspettare le 9:
+    schtasks /run /tn "Ricerca auto Link Motors"
+
+Per toglierlo:
+    schtasks /delete /tn "Ricerca auto Link Motors" /f
+
+
+MODO 2 — con l'Utilità di pianificazione
+----------------------------------------
+
+1. Tasto Windows, scrivere "Utilità di pianificazione", aprirla.
+2. A destra: "Crea attività di base".
+3. Nome: Ricerca auto Link Motors — Avanti.
+4. Attivazione: "Ogni giorno" — Avanti. Ora: 09:00 — Avanti.
+5. Azione: "Avvio programma" — Avanti.
+6. Programma o script: premere Sfoglia e scegliere il file
+   automazione\windows\giro-giornaliero.bat dentro questa cartella.
+7. Fine.
+
+Poi conviene aprire l'attività appena creata (doppio clic) e nella scheda
+Generale spuntare "Esegui indipendentemente dalla connessione dell'utente":
+così parte anche se nessuno ha fatto login sul server.
+
+
+SE IL COMPUTER È SPENTO ALLE 9
+------------------------------
+
+Nell'attività, scheda Impostazioni, spuntare
+"Esegui l'attività il prima possibile dopo l'avvio pianificato non riuscito".
+Così il giro parte appena il computer torna acceso.
+
+
+COME SI CONTROLLA CHE ABBIA FATTO IL GIRO
+-----------------------------------------
+
+Nel file output\registro.log: ogni giro scrive una riga con data e ora,
+poi quante auto ha trovato per ogni fascia. Se qualcosa va storto, lì c'è
+scritto cosa. Quando supera i 2 MB viene messo da parte come
+registro-vecchio.log e si riparte puliti.
+
+I risultati stanno in output\ultimo.csv (per Excel) e output\ultimo.html.
+
+output\ultimo.html va aperto con un browser. Se Windows lo apre con il
+lettore PDF, è solo l'associazione dei file sbagliata: tasto destro >
+Apri con > Scegli un'altra app > Microsoft Edge, e spuntare "Usa sempre".
+
+
+SE LA CARTELLA STA SU ONEDRIVE
+------------------------------
+
+Come in questo caso. I file possono essere solo segnaposto, scaricati al
+primo accesso: se il giro parte quando il computer è appena acceso e
+OneDrive non ha ancora finito di sincronizzare, può fallire.
+Per stare tranquilli: tasto destro sulla cartella "Link Motors" >
+"Mantieni sempre su questo dispositivo".
