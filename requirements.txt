@@ -1,0 +1,2 @@
+# Il CRM usa solo la libreria standard di Python: nessuna dipendenza da installare.
+# Il file serve a Render per riconoscere che è un progetto Python.

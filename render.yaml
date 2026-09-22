@@ -1,0 +1,27 @@
+# Configurazione per il deploy su Render (https://render.com).
+# Da Render: New > Blueprint > collega il repo linkmotorscermenate/CRM.
+#
+# Il piano "starter" ha un disco persistente: senza, Render azzera i file a ogni
+# riavvio e il CRM perderebbe stato dei contatti, storico e impostazioni.
+services:
+  - type: web
+    name: crm-linkmotors
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    # Disco persistente: qui restano output, dati/ e config.json.
+    disk:
+      name: dati-crm
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      # Dove l'app salva i dati: il disco persistente qui sopra.
+      - key: CRM_DATA_DIR
+        value: /var/data
+      # Utenti del login, formato "utente1:password1,utente2:password2".
+      # NON messo qui: si imposta nella dashboard di Render (resta segreto).
+      - key: CRM_UTENTI
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.12.5"

@@ -9,9 +9,12 @@ e Subito, cosa che una pagina statica non può fare.
 
 from __future__ import annotations
 
+import base64
 import csv
+import hmac
 import json
 import os
+import shutil
 import sys
 import threading
 import urllib.parse
@@ -26,12 +29,32 @@ from fonti.comune import ErroreFonte
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 WEB = os.path.join(QUI, "web")
-USCITA = os.path.join(QUI, "output")
-DATI = os.path.join(QUI, "dati")
+# Su un hosting (Render) il disco dell'app è effimero: quel che l'app scrive va
+# perso a ogni riavvio. Se è montato un disco persistente si punta lì con
+# CRM_DATA_DIR, così storico, report, impostazioni e stato dei contatti restano.
+# In locale, senza quella variabile, tutto resta nella cartella del progetto.
+BASE_DATI = os.environ.get("CRM_DATA_DIR", QUI)
+USCITA = os.path.join(BASE_DATI, "output")
+DATI = os.path.join(BASE_DATI, "dati")
+CONFIG = os.path.join(BASE_DATI, "config.json")
 # Lo stato di lavorazione di ogni annuncio (contattato / da chi / status affare),
 # agganciato all'URL dell'annuncio così sopravvive ai nuovi giri di ricerca.
 ORGANIZZAZIONE = os.path.join(DATI, "organizzazione.json")
-PORTA = int(os.environ.get("PORTA", "8080"))
+# Render fornisce la porta in PORT; in locale si usa PORTA (default 8080).
+PORTA = int(os.environ.get("PORT") or os.environ.get("PORTA") or "8080")
+
+# Login: attivo solo se sono configurati degli utenti (variabile CRM_UTENTI, con
+# coppie "utente:password" separate da virgola). Senza, in locale, niente login.
+def _utenti_configurati() -> dict[str, str]:
+    utenti: dict[str, str] = {}
+    for coppia in (os.environ.get("CRM_UTENTI") or "").split(","):
+        utente, separatore, password = coppia.partition(":")
+        if separatore and utente.strip():
+            utenti[utente.strip()] = password
+    return utenti
+
+
+UTENTI = _utenti_configurati()
 
 TIPI = {".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8",
         ".js": "text/javascript; charset=utf-8", ".csv": "text/csv; charset=utf-8"}
@@ -146,12 +169,13 @@ def carica_ultimo() -> None:
 # --------------------------------------------------------------------------
 
 def leggi_config() -> dict:
-    with open(os.path.join(QUI, "config.json"), encoding="utf-8") as file:
+    with open(CONFIG, encoding="utf-8") as file:
         return json.load(file)
 
 
 def salva_config(config: dict) -> None:
-    with open(os.path.join(QUI, "config.json"), "w", encoding="utf-8") as file:
+    os.makedirs(os.path.dirname(CONFIG) or ".", exist_ok=True)
+    with open(CONFIG, "w", encoding="utf-8") as file:
         json.dump(config, file, ensure_ascii=False, indent=2)
 
 
@@ -246,6 +270,30 @@ class Gestore(BaseHTTPRequestHandler):
     def log_message(self, formato: str, *argomenti) -> None:
         pass  # niente rumore nel terminale
 
+    # -- accesso ------------------------------------------------------------
+
+    def _autenticato(self) -> bool:
+        """Login utente+password (HTTP Basic). Se non ci sono utenti configurati
+        (uso in locale) non chiede niente. Il confronto è a tempo costante per
+        non far trapelare la password un carattere alla volta."""
+        if not UTENTI:
+            return True
+        intestazione = self.headers.get("Authorization", "")
+        if intestazione.startswith("Basic "):
+            try:
+                decodificato = base64.b64decode(intestazione[6:]).decode("utf-8")
+            except (ValueError, UnicodeDecodeError):
+                decodificato = ""
+            utente, _, password = decodificato.partition(":")
+            attesa = UTENTI.get(utente)
+            if attesa is not None and hmac.compare_digest(password, attesa):
+                return True
+        self.send_response(401)
+        self.send_header("WWW-Authenticate", 'Basic realm="CRM Link Motors", charset="UTF-8"')
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+        return False
+
     # -- risposte -----------------------------------------------------------
 
     def _json(self, dati: Any, codice: int = 200) -> None:
@@ -278,6 +326,8 @@ class Gestore(BaseHTTPRequestHandler):
         return [cerca.etichetta_fascia(mi or 0, ma) for mi, ma in config["fasce_prezzo"]]
 
     def do_GET(self) -> None:
+        if not self._autenticato():
+            return
         percorso = urllib.parse.urlparse(self.path).path
 
         if percorso in ("/", "/index.html"):
@@ -320,6 +370,8 @@ class Gestore(BaseHTTPRequestHandler):
         self._json({"errore": "rotta sconosciuta"}, 404)
 
     def do_POST(self) -> None:
+        if not self._autenticato():
+            return
         percorso = urllib.parse.urlparse(self.path).path
         lunghezza = int(self.headers.get("Content-Length") or 0)
         try:
@@ -356,15 +408,31 @@ class Gestore(BaseHTTPRequestHandler):
         self._json({"errore": "rotta sconosciuta"}, 404)
 
 
-def main() -> int:
+def _prepara_dati() -> None:
+    """Crea le cartelle dati e, se si parte su un disco vuoto (es. il disco
+    persistente di Render al primo avvio), copia lì il config di partenza dal
+    repo così l'app trova le impostazioni."""
     os.makedirs(USCITA, exist_ok=True)
+    os.makedirs(DATI, exist_ok=True)
+    config_repo = os.path.join(QUI, "config.json")
+    if not os.path.exists(CONFIG) and os.path.exists(config_repo):
+        shutil.copyfile(config_repo, CONFIG)
+
+
+def main() -> int:
+    _prepara_dati()
     carica_ultimo()
-    indirizzo = f"http://localhost:{PORTA}"
-    server = ThreadingHTTPServer(("127.0.0.1", PORTA), Gestore)
-    print(f"Ricerca auto — {indirizzo}")
+    # In cloud (Render fornisce PORT) si ascolta su tutte le interfacce e non si
+    # apre nessun browser; in locale si resta su 127.0.0.1 come prima.
+    in_cloud = bool(os.environ.get("PORT"))
+    host = os.environ.get("HOST") or ("0.0.0.0" if in_cloud else "127.0.0.1")
+    server = ThreadingHTTPServer((host, PORTA), Gestore)
+    print(f"Ricerca auto — in ascolto su {host}:{PORTA}")
+    if UTENTI:
+        print(f"Login attivo per: {', '.join(UTENTI)}")
     print("Per fermarlo: Ctrl+C")
-    if "--no-apri" not in sys.argv:
-        threading.Timer(0.8, lambda: webbrowser.open(indirizzo)).start()
+    if not in_cloud and "--no-apri" not in sys.argv:
+        threading.Timer(0.8, lambda: webbrowser.open(f"http://localhost:{PORTA}")).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:

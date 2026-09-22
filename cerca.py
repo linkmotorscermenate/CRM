@@ -28,6 +28,10 @@ from fonti.comune import Annuncio, ErroreFonte
 from report import scrivi_report
 
 QUI = os.path.dirname(os.path.abspath(__file__))
+# Dove finiscono storico e report. In locale è la cartella del progetto; su un
+# hosting (Render) si punta a un disco persistente con CRM_DATA_DIR, altrimenti
+# a ogni riavvio i file scritti andrebbero persi.
+BASE_DATI = os.environ.get("CRM_DATA_DIR", QUI)
 
 COLONNE = [
     ("nuovo", "Nuovo"),
@@ -118,7 +122,7 @@ def segna_novita(annunci: list[Annuncio], oggi: str, giorni_memoria: int = 120) 
     Restituisce False se è il primo giro in assoluto: lì sarebbe tutto nuovo e
     dirlo non aggiungerebbe niente.
     """
-    percorso = os.path.join(QUI, "dati", "storico.json")
+    percorso = os.path.join(BASE_DATI, "dati", "storico.json")
     storico: dict[str, str] = {}
     if os.path.exists(percorso):
         with open(percorso, encoding="utf-8") as file:
@@ -289,7 +293,7 @@ def esegui(
     nuovi = sum(1 for a in annunci if a.nuovo)
     annunci.sort(key=lambda a: (a.prezzo is None, a.prezzo or 0))
 
-    cartella = os.path.join(QUI, (config.get("output") or {}).get("cartella", "output"))
+    cartella = os.path.join(BASE_DATI, (config.get("output") or {}).get("cartella", "output"))
     os.makedirs(cartella, exist_ok=True)
     marca_tempo = inizio.strftime("%Y-%m-%d_%H%M")
     percorso_csv = os.path.join(cartella, f"auto_privati_{marca_tempo}.csv")
